@@ -1,0 +1,197 @@
+/**
+ * Klinik Gigi Nadira — Design Tokens
+ * -----------------------------------
+ * Single source of truth for layout, type, color, radius, shadow.
+ * Values snap to an 8pt grid (with 4pt half-steps) so HTML→Figma
+ * importers can map cleanly to Figma Variables.
+ *
+ * Figma mapping (create Collections → Variables):
+ *   Color / soap-50 … leaf-900 … ink-950
+ *   Spacing / space-1 … space-24  (px)
+ *   Type / text-xs … text-display  (px + line-height)
+ *   Radius / radius-sm … radius-full
+ *   Shadow / shadow-soft | card | lift | nav | icon | glow
+ *
+ * Prefer tokens over arbitrary rem/px in components.
+ */
+
+:root {
+  /* ─── Color: soap (mint wash) ─── */
+  --color-soap-50:  #f7fcf8;
+  --color-soap-100: #eef8f0;
+  --color-soap-200: #d8f0de;
+  --color-soap-300: #b5e2c2;
+
+  /* ─── Color: leaf (brand green) ─── */
+  --color-leaf-400: #5ec07a;
+  --color-leaf-500: #3aab5c;
+  --color-leaf-600: #2d8f4b;
+  --color-leaf-700: #247240;
+  --color-leaf-800: #1f5c36;
+  --color-leaf-900: #1a4a2d;
+
+  /* ─── Color: ink (neutral) ─── */
+  --color-ink-50:  #f7f8f8;
+  --color-ink-100: #eef0f1;
+  --color-ink-200: #d9dde0;
+  --color-ink-300: #b4bcc2;
+  --color-ink-400: #87939c;
+  --color-ink-500: #66747f;
+  --color-ink-600: #4f5c66;
+  --color-ink-700: #414b53;
+  --color-ink-800: #383f45;
+  --color-ink-900: #1f252a;
+  --color-ink-950: #12161a;
+
+  /* ─── Color: surface & semantic ─── */
+  --color-white:       #ffffff;
+  --color-page:        #fafbfb;
+  --color-border:      #e5e9ec;
+  --color-border-hover:#cfd6db;
+  --color-danger:      #e11d48;
+  --color-footer-mid:  #0f1c2a;
+  --color-footer-deep: #0a1420;
+
+  /* ─── Color: alpha (use sparingly; Figma = solid overlays) ─── */
+  --color-leaf-400-a14: rgba(94, 192, 122, 0.14);
+  --color-leaf-400-a18: rgba(94, 192, 122, 0.18);
+  --color-leaf-400-a22: rgba(94, 192, 122, 0.22);
+  --color-leaf-600-a12: rgba(45, 143, 75, 0.12);
+  --color-leaf-600-a15: rgba(45, 143, 75, 0.15);
+  --color-leaf-600-a22: rgba(45, 143, 75, 0.22);
+  --color-leaf-600-a25: rgba(45, 143, 75, 0.25);
+  --color-leaf-600-a35: rgba(45, 143, 75, 0.35);
+  --color-leaf-600-a50: rgba(45, 143, 75, 0.50);
+  --color-leaf-600-a55: rgba(45, 143, 75, 0.55);
+  --color-soap-300-a55: rgba(181, 226, 194, 0.55);
+  --color-soap-300-a70: rgba(181, 226, 194, 0.70);
+  --color-soap-300-a35: rgba(181, 226, 194, 0.35);
+  --color-white-a55:    rgba(255, 255, 255, 0.55);
+  --color-white-a65:    rgba(255, 255, 255, 0.65);
+  --color-white-a72:    rgba(255, 255, 255, 0.72);
+  --color-white-a45:    rgba(255, 255, 255, 0.45);
+  --color-white-a12:    rgba(255, 255, 255, 0.12);
+  --color-ink-900-a04:  rgba(18, 22, 26, 0.04);
+  --color-ink-900-a06:  rgba(18, 22, 26, 0.06);
+  --color-ink-900-a08:  rgba(18, 22, 26, 0.08);
+  --color-ink-900-a12:  rgba(18, 22, 26, 0.12);
+  --color-ink-900-a14:  rgba(18, 22, 26, 0.14);
+  --color-ink-900-a16:  rgba(18, 22, 26, 0.16);
+  --color-ink-900-a20:  rgba(18, 22, 26, 0.20);
+
+  /* ─── Spacing (8pt grid; 4pt half-steps) ───
+   * space-N ≈ N × 4px
+   */
+  --space-0:  0;
+  --space-1:  0.25rem;  /*  4px */
+  --space-2:  0.5rem;   /*  8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-7:  1.75rem;  /* 28px */
+  --space-8:  2rem;     /* 32px */
+  --space-9:  2.25rem;  /* 36px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-11: 2.75rem;  /* 44px */
+  --space-12: 3rem;     /* 48px */
+  --space-14: 3.5rem;   /* 56px */
+  --space-16: 4rem;     /* 64px */
+  --space-18: 4.5rem;   /* 72px — header / hero offset */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-28: 7rem;     /* 112px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ─── Layout ─── */
+  --shell-max: 68rem;   /* 1088px */
+  --page-gutter: var(--space-5);       /* 20px mobile */
+  --page-gutter-lg: var(--space-6);    /* 24px desktop */
+  --header-h: var(--space-18);         /* 72px */
+
+  /* ─── Type scale (px-equivalent rem) ─── */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.8125rem; /* 13px */
+  --text-md:   0.875rem;  /* 14px */
+  --text-base: 0.9375rem; /* 15px — body default */
+  --text-lg:   1rem;      /* 16px */
+  --text-xl:   1.0625rem; /* 17px */
+  --text-2xl:  1.25rem;   /* 20px */
+  --text-3xl:  1.5rem;    /* 24px */
+  --text-4xl:  2rem;      /* 32px */
+  --text-5xl:  2.5rem;    /* 40px — hero mobile */
+  --text-6xl:  3rem;      /* 48px — hero desktop (snap from 3.15) */
+  --text-display: 3rem;
+
+  --leading-none:    1;
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.4;
+  --leading-relaxed: 1.55;
+
+  --tracking-tight:  -0.02em;
+  --tracking-snug:   -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.01em;
+  --tracking-caps:   0.1em;
+  --tracking-eyebrow: 0.14em;
+
+  --font-sans: "Quicksand", "Nunito", system-ui, sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ─── Radius (8pt-friendly) ─── */
+  --radius-sm:   0.5rem;   /*  8px */
+  --radius-md:   0.75rem;  /* 12px */
+  --radius-lg:   1rem;     /* 16px */
+  --radius-xl:   1.25rem;  /* 20px */
+  --radius-2xl:  1.5rem;   /* 24px */
+  --radius-3xl:  1.75rem;  /* 28px */
+  --radius-full: 9999px;
+
+  /* ─── Shadows (named; keep simple for Figma) ─── */
+  --shadow-soft: 0 4px 24px -6px rgba(31, 92, 54, 0.10);
+  --shadow-card: 0 2px 12px -2px rgba(18, 22, 26, 0.06), 0 8px 28px -8px rgba(18, 22, 26, 0.08);
+  --shadow-lift: 0 16px 40px -12px rgba(18, 22, 26, 0.14);
+  --shadow-nav:  0 4px 24px -4px rgba(31, 92, 54, 0.12);
+  --shadow-icon: 0 8px 18px -6px rgba(45, 143, 75, 0.35);
+  --shadow-glow: 0 14px 28px -10px rgba(45, 143, 75, 0.50);
+  --shadow-cta:  0 12px 24px -10px rgba(45, 143, 75, 0.55);
+  --shadow-trust: 0 10px 30px -18px rgba(45, 143, 75, 0.25);
+  --shadow-focus: 0 0 0 3px rgba(58, 171, 92, 0.15);
+  --shadow-icon-ring: 0 0 0 6px rgba(94, 192, 122, 0.14);
+
+  /* ─── Component sizes (fixed, grid-snapped) ─── */
+  --size-icon-sm:  1.25rem;  /* 20px */
+  --size-icon-md:  1.5rem;   /* 24px */
+  --size-icon-lg:  1.75rem;  /* 28px */
+  --size-tile-sm:  2.75rem;  /* 44px */
+  --size-tile-md:  3rem;     /* 48px */
+  --size-tile-lg:  4rem;     /* 64px — hero action circle */
+  --size-btn-h:    3rem;     /* 48px */
+  --size-input-h:  2.75rem;  /* 44px */
+  --size-nav-logo: 2.75rem;  /* 44px */
+
+  /* ─── Motion ─── */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.15s;
+  --duration-base: 0.25s;
+  --duration-slow: 0.28s;
+
+  /* ─── Gradients (named; prefer solid in Figma frames) ─── */
+  --gradient-leaf: linear-gradient(145deg, var(--color-leaf-400) 0%, var(--color-leaf-600) 100%);
+  --gradient-leaf-deep: linear-gradient(155deg, #6fca8a 0%, var(--color-leaf-600) 55%, var(--color-leaf-700) 100%);
+  --gradient-hero-wash:
+    radial-gradient(ellipse 80% 60% at 70% 20%, var(--color-leaf-400-a18), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, var(--color-soap-300-a35), transparent 50%),
+    linear-gradient(180deg, var(--color-soap-100) 0%, var(--color-soap-50) 45%, var(--color-page) 100%);
+  --gradient-page-wash:
+    radial-gradient(ellipse 70% 50% at 80% 0%, var(--color-leaf-400-a14), transparent 50%),
+    linear-gradient(180deg, var(--color-soap-100) 0%, var(--color-page) 40%);
+  --gradient-footer:
+    radial-gradient(ellipse 60% 80% at 10% 0%, rgba(58, 171, 92, 0.18), transparent 50%),
+    linear-gradient(180deg, var(--color-leaf-900) 0%, var(--color-footer-mid) 55%, var(--color-footer-deep) 100%);
+  --gradient-actions-strip:
+    linear-gradient(180deg, rgba(238, 248, 240, 0) 0%, rgba(216, 240, 222, 0.55) 28%, rgba(232, 248, 238, 0.9) 100%);
+}

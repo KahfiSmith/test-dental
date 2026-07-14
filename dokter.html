@@ -11,23 +11,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/site.css" />
 </head>
-<body class="bg-[#fafbfb] font-sans text-ink-800">
+<body class="bg-page font-sans text-ink-800">
 
   <header class="fixed inset-x-0 top-0 z-50 bg-soap-100/95 shadow-nav backdrop-blur-md">
-    <div class="mx-auto flex h-[4.5rem] max-w-shell items-center justify-between px-5 lg:px-6">
+    <div class="mx-auto flex h-header max-w-shell items-center justify-between px-5 lg:px-6">
       <a href="index.html" class="flex items-center gap-3">
         <span class="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-leaf-400 to-leaf-700 shadow-soft ring-2 ring-white">
-          <span class="font-accent text-[15px] font-bold tracking-tight text-white">N</span>
+          <span class="font-accent text-base font-bold tracking-tight text-white">N</span>
         </span>
         <div class="leading-tight">
-          <div class="font-accent text-[15px] font-bold tracking-tight text-ink-900">Klinik Gigi Nadira</div>
-          <div class="text-[13px] font-semibold text-leaf-700/80">Senyum sehat, hidup bernilai</div>
+          <div class="font-accent text-base font-bold tracking-tight text-ink-900">Klinik Gigi Nadira</div>
+          <div class="text-sm font-semibold text-leaf-700/80">Senyum sehat, hidup bernilai</div>
         </div>
       </a>
 
-            <nav class="hidden items-center gap-6 text-[15px] font-semibold text-ink-700 lg:flex">
+            <nav class="hidden items-center gap-6 text-base font-semibold text-ink-700 lg:flex">
         <a href="index.html" class="nav-link">Beranda</a>
         <a href="reservasi.html" class="nav-link">Reservasi</a>
         <a href="dokter.html" class="nav-link is-active">Dokter</a>
@@ -36,15 +37,15 @@
       </nav>
 
       <a href="reservasi.html"
-         class="font-accent inline-flex items-center gap-2 rounded-full bg-leaf-600 px-4 py-2.5 text-[13px] font-semibold text-white shadow-soft transition hover:bg-leaf-700">
+         class="font-accent inline-flex items-center gap-2 rounded-full bg-leaf-600 px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-leaf-700">
         Reservasi
       </a>
     </div>
   </header>
 
-  <main class="page-wash min-h-screen pt-[4.5rem]">
+  <main class="page-wash min-h-screen pt-18">
     <div class="mx-auto max-w-shell px-5 py-10 lg:px-6 lg:py-14">
-      <nav class="mb-6 text-[13px] font-semibold text-ink-400">
+      <nav class="mb-6 text-sm font-semibold text-ink-400">
         <a href="index.html" class="hover:text-leaf-700">Beranda</a>
         <span class="mx-2">/</span>
         <span class="text-ink-700">Dokter</span>
@@ -52,27 +53,27 @@
 
       <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
         <div class="max-w-2xl">
-          <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">Dokter Kami</p>
+          <p class="font-accent text-sm font-bold uppercase tracking-[0.16em] text-leaf-600">Dokter Kami</p>
           <h1 class="mt-2 text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl">
             Tim dokter spesialis &amp; <span class="text-leaf-700">umum berpengalaman</span>
           </h1>
-          <p class="mt-3 text-[15px] leading-relaxed text-ink-500">
+          <p class="mt-3 text-base leading-relaxed text-ink-500">
             Data live dari sistem Klinik Gigi Nadira — pilih dokter, lalu lanjut reservasi di cabang yang sesuai.
           </p>
         </div>
         <div class="flex items-center gap-3">
           <div class="rounded-2xl bg-white px-4 py-3 shadow-card ring-1 ring-ink-100">
             <div id="doctor-count" class="font-display text-2xl font-bold text-ink-900">—</div>
-            <div class="text-[13px] font-bold uppercase tracking-wider text-ink-400">Ditampilkan</div>
+            <div class="text-sm font-bold uppercase tracking-wider text-ink-400">Ditampilkan</div>
           </div>
-          <a href="reservasi.html" class="inline-flex h-12 items-center rounded-full bg-leaf-600 px-5 text-[13.5px] font-bold text-white transition hover:bg-leaf-700">
+          <a href="reservasi.html" class="inline-flex h-12 items-center rounded-full bg-leaf-600 px-5 text-sm font-bold text-white transition hover:bg-leaf-700">
             Buat reservasi
           </a>
         </div>
       </div>
 
       <!-- Filters -->
-      <div class="mt-8 grid gap-3 rounded-[1.35rem] border border-ink-100 bg-white p-4 shadow-sm sm:grid-cols-[1fr_16rem] sm:p-5">
+      <div class="mt-8 grid gap-3 rounded-xl border border-ink-100 bg-white p-4 shadow-sm sm:grid-cols-[1fr_16rem] sm:p-5">
         <div>
           <label class="field-label" for="doctor-search">Cari dokter</label>
           <input class="field-input" id="doctor-search" type="search" placeholder="Nama, spesialisasi, cabang…" autocomplete="off" />
@@ -85,7 +86,7 @@
         </div>
       </div>
 
-      <p id="doctor-status" class="mt-6 text-[14px] font-semibold text-ink-500">Memuat daftar dokter…</p>
+      <p id="doctor-status" class="mt-6 text-md font-semibold text-ink-500">Memuat daftar dokter…</p>
 
       <div id="doctor-grid" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <!-- cards injected by js/dokter.js -->
@@ -104,14 +105,14 @@
         <!-- Brand -->
         <div class="md:col-span-5">
           <div>
-            <div class="font-accent text-[16px] font-extrabold tracking-tight text-white">Klinik Gigi Nadira</div>
-            <div class="text-[13px] font-medium text-white/55">Senyum sehat, hidup bernilai</div>
+            <div class="font-accent text-lg font-extrabold tracking-tight text-white">Klinik Gigi Nadira</div>
+            <div class="text-sm font-medium text-white/55">Senyum sehat, hidup bernilai</div>
           </div>
-          <p class="mt-5 max-w-sm text-[14.5px] leading-relaxed text-white/60">
+          <p class="mt-5 max-w-sm text-md leading-relaxed text-white/60">
             Klinik gigi modern dengan pelayanan profesional, aman, lengkap, dan minim rasa sakit di Semarang &amp; Pati.
           </p>
           <a href="reservasi.html"
-             class="mt-6 inline-flex h-11 items-center rounded-full bg-leaf-500 px-5 text-[14px] font-bold text-white transition hover:bg-leaf-400">
+             class="mt-6 inline-flex h-11 items-center rounded-full bg-leaf-500 px-5 text-md font-bold text-white transition hover:bg-leaf-400">
             Buat Reservasi
           </a>
         </div>
@@ -144,7 +145,7 @@
           <h3 class="footer-heading">Kontak</h3>
           <ul class="footer-links">
             <li>
-              <span class="block text-white/45 text-[13px] font-semibold mb-0.5">Area layanan</span>
+              <span class="block text-white/45 text-sm font-semibold mb-0.5">Area layanan</span>
               <span class="text-white/80">Semarang · Pati</span>
             </li>
             <li>
@@ -158,8 +159,8 @@
       </div>
 
       <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 sm:flex-row">
-        <p class="text-[13.5px] font-medium text-white/45">© 2026 Klinik Gigi Nadira. All rights reserved.</p>
-        <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[13.5px] font-semibold text-white/50">
+        <p class="text-sm font-medium text-white/45">© 2026 Klinik Gigi Nadira. All rights reserved.</p>
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm font-semibold text-white/50">
           <a href="dokter.html" class="hover:text-white">Dokter</a>
           <a href="lokasi.html" class="hover:text-white">Cabang</a>
           <a href="reservasi.html" class="hover:text-white">Reservasi</a>
