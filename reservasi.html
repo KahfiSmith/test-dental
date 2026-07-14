@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Formulir reservasi Klinik Gigi Nadira — pilih cabang, tanggal, dan dokter." />
+  <title>Reservasi — Klinik Gigi Nadira</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body class="bg-[#fafbfb] font-sans text-ink-800">
+
+  <header class="fixed inset-x-0 top-0 z-50 bg-soap-100/95 shadow-nav backdrop-blur-md">
+    <div class="mx-auto flex h-[4.5rem] max-w-shell items-center justify-between px-5 lg:px-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-leaf-400 to-leaf-700 shadow-soft ring-2 ring-white">
+          <span class="text-[15px] font-bold tracking-tight text-white">N</span>
+        </span>
+        <div class="leading-tight">
+          <div class="text-[15px] font-bold tracking-tight text-ink-900">Klinik Gigi Nadira</div>
+          <div class="text-[13px] font-medium text-leaf-700/80">Senyum sehat, hidup bernilai</div>
+        </div>
+      </a>
+
+            <nav class="hidden items-center gap-6 text-[15px] font-semibold text-ink-700 lg:flex">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="reservasi.html" class="nav-link is-active">Reservasi</a>
+        <a href="dokter.html" class="nav-link">Dokter</a>
+        <a href="lokasi.html" class="nav-link">Klinik Kami</a>
+        <a href="layanan.html" class="nav-link">Layanan</a>
+      </nav>
+
+      <a href="reservasi.html"
+         class="inline-flex items-center gap-2 rounded-full bg-leaf-600 px-4 py-2.5 text-[13px] font-bold text-white shadow-soft transition hover:bg-leaf-700">
+        Reservasi
+      </a>
+    </div>
+  </header>
+
+  <main class="page-wash min-h-screen pt-[4.5rem]">
+    <div class="mx-auto max-w-shell px-5 py-10 lg:px-6 lg:py-14">
+      <!-- Breadcrumb -->
+      <nav class="mb-6 text-[13px] text-ink-400">
+        <a href="index.html" class="hover:text-leaf-700">Beranda</a>
+        <span class="mx-2">/</span>
+        <span class="font-semibold text-ink-700">Reservasi</span>
+      </nav>
+
+      <div class="mb-8 max-w-2xl">
+        <h1 class="text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl">Reservasi</h1>
+        <p class="mt-2 text-[15px] leading-relaxed text-ink-500">
+          Lengkapi data di bawah untuk mengajukan janji temu. Tim kami akan menghubungi Anda untuk konfirmasi.
+        </p>
+      </div>
+
+      <div class="overflow-hidden rounded-[1.5rem] border border-ink-100 bg-white shadow-card">
+        <div class="border-b border-ink-100 px-6 py-5 sm:px-8">
+          <h2 class="text-[17px] font-bold tracking-tight text-ink-900">Formulir Reservasi</h2>
+          <p class="mt-1 text-[13px] text-ink-400">Field bertanda <span class="text-rose-500">*</span> wajib diisi.</p>
+        </div>
+
+        <form id="reservation-form" class="px-6 py-7 sm:px-8 sm:py-8" novalidate>
+          <div class="grid gap-x-6 gap-y-5 sm:grid-cols-2">
+            <div>
+              <label class="field-label" for="nama">Nama <span class="req">*</span></label>
+              <input class="field-input" type="text" id="nama" name="nama" placeholder="Masukkan nama" required autocomplete="name" />
+            </div>
+
+            <div>
+              <label class="field-label" for="telepon">No Telepon <span class="req">*</span></label>
+              <input class="field-input" type="tel" id="telepon" name="telepon" placeholder="Masukkan nomor telepon" required autocomplete="tel" inputmode="tel" />
+            </div>
+
+            <div>
+              <label class="field-label" for="status">Status Pasien <span class="req">*</span></label>
+              <select class="field-input" id="status" name="status" required>
+                <option value="" disabled selected>Pilih status pasien</option>
+                <option value="baru">Pasien Baru</option>
+                <option value="lama">Pasien Lama</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="field-label" for="cabang">Cabang Klinik <span class="req">*</span></label>
+              <select class="field-input" id="cabang" name="cabang" required>
+                <option value="" disabled selected>Pilih cabang klinik</option>
+                <option value="tusam">Tusam Timur — Semarang</option>
+                <option value="sukun">Sukun Raya — Semarang</option>
+                <option value="tirto">Tirto Agung — Semarang</option>
+                <option value="kelud">Kelud Raya — Semarang</option>
+                <option value="fatmawati">Fatmawati — Semarang</option>
+                <option value="haryono">MT. Haryono — Semarang</option>
+                <option value="ngaliyan">Ngaliyan — Semarang</option>
+                <option value="tlogosari">Tlogosari — Semarang</option>
+                <option value="pati-pratomo">Pati — Pratomo</option>
+                <option value="pati-diponegoro">Pati — Diponegoro</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="field-label" for="tanggal">Tanggal Kedatangan <span class="req">*</span></label>
+              <input class="field-input" type="date" id="tanggal" name="tanggal" required />
+            </div>
+
+            <div>
+              <label class="field-label" for="dokter">Dokter <span class="req">*</span></label>
+              <select class="field-input" id="dokter" name="dokter" required disabled>
+                <option value="" disabled selected>Pilih dokter</option>
+              </select>
+              <p class="field-hint" id="dokter-hint">Pilih cabang klinik dan tanggal kedatangan terlebih dahulu untuk menampilkan daftar dokter.</p>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label class="field-label" for="rencana">Rencana Perawatan</label>
+              <textarea class="field-input" id="rencana" name="rencana" rows="4" placeholder="Masukkan rencana perawatan"></textarea>
+            </div>
+          </div>
+
+          <div class="mt-7">
+            <button type="submit"
+                    class="inline-flex h-11 items-center justify-center rounded-full bg-leaf-600 px-8 text-[14px] font-bold text-white shadow-soft transition hover:bg-leaf-700 focus:outline-none focus:ring-4 focus:ring-leaf-500/20">
+              Konfirmasi Reservasi
+            </button>
+          </div>
+          <p id="form-message" class="mt-4 hidden text-[13px] font-medium" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-2xl border border-ink-100 bg-white p-5">
+          <div class="text-[13.5px] font-bold uppercase tracking-wider text-leaf-600">Langkah 1</div>
+          <p class="mt-2 text-[13.5px] text-ink-600">Isi data diri &amp; pilih status pasien</p>
+        </div>
+        <div class="rounded-2xl border border-ink-100 bg-white p-5">
+          <div class="text-[13.5px] font-bold uppercase tracking-wider text-leaf-600">Langkah 2</div>
+          <p class="mt-2 text-[13.5px] text-ink-600">Pilih cabang, tanggal, dan dokter</p>
+        </div>
+        <div class="rounded-2xl border border-ink-100 bg-white p-5">
+          <div class="text-[13.5px] font-bold uppercase tracking-wider text-leaf-600">Langkah 3</div>
+          <p class="mt-2 text-[13.5px] text-ink-600">Konfirmasi — kami hubungi Anda</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="mx-auto max-w-shell px-5 pt-14 pb-8 lg:px-6">
+      <div class="grid gap-10 md:grid-cols-12 md:gap-8">
+        <!-- Brand -->
+        <div class="md:col-span-5">
+          <div>
+            <div class="font-accent text-[16px] font-extrabold tracking-tight text-white">Klinik Gigi Nadira</div>
+            <div class="text-[13px] font-medium text-white/55">Senyum sehat, hidup bernilai</div>
+          </div>
+          <p class="mt-5 max-w-sm text-[14.5px] leading-relaxed text-white/60">
+            Klinik gigi modern dengan pelayanan profesional, aman, lengkap, dan minim rasa sakit di Semarang &amp; Pati.
+          </p>
+          <a href="reservasi.html"
+             class="mt-6 inline-flex h-11 items-center rounded-full bg-leaf-500 px-5 text-[14px] font-bold text-white transition hover:bg-leaf-400">
+            Buat Reservasi
+          </a>
+        </div>
+
+        <!-- Nav -->
+        <div class="md:col-span-2">
+          <h3 class="footer-heading">Navigasi</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="reservasi.html">Reservasi</a></li>
+            <li><a href="dokter.html">Dokter</a></li>
+            <li><a href="lokasi.html">Klinik Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+          </ul>
+        </div>
+
+        <!-- Layanan -->
+        <div class="md:col-span-2">
+          <h3 class="footer-heading">Layanan</h3>
+          <ul class="footer-links">
+            <li><a href="layanan.html">Ortodonti / Behel</a></li>
+            <li><a href="layanan.html">Scaling &amp; Bleaching</a></li>
+            <li><a href="layanan.html">Perawatan Anak</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div class="md:col-span-3">
+          <h3 class="footer-heading">Kontak</h3>
+          <ul class="footer-links">
+            <li>
+              <span class="block text-white/45 text-[13px] font-semibold mb-0.5">Area layanan</span>
+              <span class="text-white/80">Semarang · Pati</span>
+            </li>
+            <li>
+              <a href="https://klinikgiginadira.com" target="_blank" rel="noopener" class="text-white/80 hover:text-leaf-300">klinikgiginadira.com</a>
+            </li>
+            <li>
+              <a href="reservasi.html" class="text-white/80 hover:text-leaf-300">Reservasi online 24/7</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 sm:flex-row">
+        <p class="text-[13.5px] font-medium text-white/45">© 2026 Klinik Gigi Nadira. All rights reserved.</p>
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[13.5px] font-semibold text-white/50">
+          <a href="dokter.html" class="hover:text-white">Dokter</a>
+          <a href="lokasi.html" class="hover:text-white">Cabang</a>
+          <a href="reservasi.html" class="hover:text-white">Reservasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/reservasi.js"></script>
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Klinik Gigi Nadira — perawatan gigi modern, nyaman, dan minim rasa sakit di Semarang & Pati." />
+  <title>Klinik Gigi Nadira</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body class="bg-[#fafbfb] font-sans text-ink-800">
+
+  <header class="fixed inset-x-0 top-0 z-50 bg-soap-100/95 shadow-nav backdrop-blur-md">
+    <div class="mx-auto flex h-[4.5rem] max-w-shell items-center justify-between px-5 lg:px-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-leaf-400 to-leaf-700 shadow-soft ring-2 ring-white">
+          <span class="font-accent text-[15px] font-bold tracking-tight text-white">N</span>
+        </span>
+        <div class="leading-tight">
+          <div class="font-accent text-[15px] font-bold tracking-tight text-ink-900">Klinik Gigi Nadira</div>
+          <div class="text-[13px] font-semibold text-leaf-700/80">Senyum sehat, hidup bernilai</div>
+        </div>
+      </a>
+
+            <nav class="hidden items-center gap-6 text-[15px] font-semibold text-ink-700 lg:flex">
+        <a href="index.html" class="nav-link is-active">Beranda</a>
+        <a href="reservasi.html" class="nav-link">Reservasi</a>
+        <a href="dokter.html" class="nav-link">Dokter</a>
+        <a href="lokasi.html" class="nav-link">Klinik Kami</a>
+        <a href="layanan.html" class="nav-link">Layanan</a>
+      </nav>
+
+      <a href="reservasi.html"
+         class="font-accent inline-flex items-center gap-2 rounded-full bg-leaf-600 px-4 py-2.5 text-[13px] font-semibold text-white shadow-soft transition hover:bg-leaf-700">
+        Reservasi
+        <svg class="h-3.5 w-3.5 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO — tanpa foto (visual graphic + copy + akses) -->
+    <section class="hero-wash hero-no-photo relative overflow-hidden pt-[4.5rem]">
+      <!-- decorative soft shapes -->
+      <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div class="hero-orb hero-orb-a"></div>
+        <div class="hero-orb hero-orb-b"></div>
+        <div class="hero-orb hero-orb-c"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-shell px-5 pb-0 pt-12 lg:px-6 lg:pt-16">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="hero-eyebrow hero-eyebrow-center">Klinik Gigi Nadira</span>
+          <h1 class="font-display mt-5 text-[2.4rem] font-bold leading-[1.08] tracking-tight text-leaf-800 sm:text-5xl lg:text-[3.15rem]">
+            Creating beautiful smiles
+            <span class="block text-leaf-600">one at a time!</span>
+          </h1>
+          <p class="mx-auto mt-5 max-w-xl text-[17px] font-semibold leading-relaxed text-ink-700">
+            Reservasi dokter gigi mudah, nyaman, dan terpercaya.
+          </p>
+          <p class="mx-auto mt-2 max-w-lg text-[15px] leading-relaxed text-ink-500">
+            Pelayanan profesional, aman, lengkap, dan minim rasa sakit — di Semarang &amp; Pati.
+          </p>
+
+          <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="reservasi.html" class="hero-cta-primary">Buat Reservasi</a>
+            <a href="dokter.html" class="hero-cta-ghost">Lihat Dokter &amp; Jadwal</a>
+          </div>
+
+          <!-- trust pills -->
+          <div class="hero-trust mt-9">
+            <div class="hero-trust-item">
+              <span class="hero-trust-value">10+</span>
+              <span class="hero-trust-label">Cabang</span>
+            </div>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-value">50+</span>
+              <span class="hero-trust-label">Dokter</span>
+            </div>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-value">7</span>
+              <span class="hero-trust-label">Hari buka</span>
+            </div>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+            <div class="hero-trust-item">
+              <span class="hero-trust-value">24/7</span>
+              <span class="hero-trust-label">Booking</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Akses cepat -->
+        <nav class="hero-actions" aria-label="Akses cepat">
+          <div class="hero-actions-inner">
+            <a href="reservasi.html" class="hero-action">
+              <span class="hero-action-icon" aria-hidden="true">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.85"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5M9 14.25h6"/></svg>
+              </span>
+              <span class="hero-action-copy">
+                <span class="hero-action-title">Reservasi</span>
+                <span class="hero-action-desc">Booking online 24/7</span>
+              </span>
+            </a>
+            <a href="lokasi.html" class="hero-action">
+              <span class="hero-action-icon" aria-hidden="true">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.85"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </span>
+              <span class="hero-action-copy">
+                <span class="hero-action-title">Klinik</span>
+                <span class="hero-action-desc">10+ cabang</span>
+              </span>
+            </a>
+            <a href="layanan.html" class="hero-action">
+              <span class="hero-action-icon" aria-hidden="true">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.85"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 00-2.456 2.456z"/></svg>
+              </span>
+              <span class="hero-action-copy">
+                <span class="hero-action-title">Layanan</span>
+                <span class="hero-action-desc">Perawatan lengkap</span>
+              </span>
+            </a>
+            <a href="dokter.html" class="hero-action">
+              <span class="hero-action-icon" aria-hidden="true">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.85"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+              </span>
+              <span class="hero-action-copy">
+                <span class="hero-action-title">Dokter</span>
+                <span class="hero-action-desc">Jadwal praktik</span>
+              </span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="relative z-10 -mt-1 px-5 lg:px-6">
+      <div class="mx-auto max-w-shell">
+        <div class="grid gap-3 rounded-[1.75rem] bg-white p-3 shadow-card ring-1 ring-ink-900/[0.04] sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-ink-100 sm:p-2">
+          <div class="flex items-center gap-4 rounded-2xl px-5 py-5 sm:rounded-none sm:py-6">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-soap-100 text-leaf-700">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-2xl font-bold tracking-tight text-ink-900">10+</div>
+              <div class="text-[13px] font-semibold text-ink-500">Cabang Semarang &amp; Pati</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 rounded-2xl px-5 py-5 sm:rounded-none sm:py-6">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-soap-100 text-leaf-700">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-2xl font-bold tracking-tight text-ink-900">Spesialis</div>
+              <div class="text-[13px] font-semibold text-ink-500">&amp; dokter umum berpengalaman</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 rounded-2xl px-5 py-5 sm:rounded-none sm:py-6">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-soap-100 text-leaf-700">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-2xl font-bold tracking-tight text-ink-900">7 hari</div>
+              <div class="text-[13px] font-semibold text-ink-500">Buka · booking online 24/7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AKSES CEPAT — original Nadira (inspirasi konsep FDC, desain beda) -->
+    <section class="px-5 pt-10 lg:px-6 lg:pt-12">
+      <div class="mx-auto max-w-shell">
+        <div class="mb-6 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">Navigasi cepat</p>
+            <h2 class="mt-1 text-2xl font-bold tracking-tight text-ink-900 sm:text-[1.85rem]">Apa yang ingin Anda lakukan?</h2>
+          </div>
+          <p class="max-w-xs text-[13px] text-ink-400 sm:text-right">Pilih aksi utama — tanpa harus scroll jauh.</p>
+        </div>
+
+        <!-- Featured bento -->
+        <div class="grid gap-3 sm:grid-cols-2">
+          <a href="reservasi.html" class="access-feature bg-gradient-to-br from-leaf-700 via-leaf-600 to-leaf-500 text-white shadow-soft">
+            <div class="relative z-10 flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+            </div>
+            <div class="relative z-10">
+              <div class="font-display text-lg font-bold tracking-tight">Buat Reservasi</div>
+              <p class="mt-1 text-[13px] text-white/75">Isi formulir online · pilih cabang &amp; dokter</p>
+              <span class="mt-3 inline-flex items-center gap-1.5 text-[14px] font-bold text-white/95">
+                Mulai sekarang
+                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="lokasi.html" class="access-feature bg-ink-900 text-white shadow-soft">
+            <div class="relative z-10 flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </div>
+            <div class="relative z-10">
+              <div class="font-display text-lg font-bold tracking-tight">Cari Cabang</div>
+              <p class="mt-1 text-[13px] text-white/60">10+ lokasi di Semarang &amp; Pati</p>
+              <span class="mt-3 inline-flex items-center gap-1.5 text-[14px] font-bold text-leaf-300">
+                Lihat peta cabang
+                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Secondary cards — brand consistent -->
+        <div class="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <a href="layanan.html" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">Layanan</div>
+              <p class="access-desc">Behel, scaling, bleaching, dan lainnya</p>
+            </div>
+          </a>
+          <a href="#promo" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">Promo</div>
+              <p class="access-desc">Penawaran &amp; harga spesial</p>
+            </div>
+          </a>
+          <a href="#testimoni" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">Testimoni</div>
+              <p class="access-desc">Cerita pasien yang sudah merasakan</p>
+            </div>
+          </a>
+          <a href="#faq" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">FAQ</div>
+              <p class="access-desc">Jawaban pertanyaan umum</p>
+            </div>
+          </a>
+          <a href="#tentang" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">Fasilitas</div>
+              <p class="access-desc">X-ray digital, laser, steril</p>
+            </div>
+          </a>
+          <a href="dokter.html" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">Pilih Dokter</div>
+              <p class="access-desc">Spesialis &amp; dokter umum</p>
+            </div>
+          </a>
+          <a href="layanan.html" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">Perawatan Anak</div>
+              <p class="access-desc">Ramah anak, sabar &amp; nyaman</p>
+            </div>
+          </a>
+          <a href="#tentang" class="access-card">
+            <span class="access-arrow">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </span>
+            <span class="access-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            <div>
+              <div class="access-title">Jadwal Klinik</div>
+              <p class="access-desc">Buka 7 hari · booking 24/7</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="py-16 lg:py-20">
+      <div class="mx-auto max-w-shell px-5 lg:px-6">
+        <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div class="order-2 lg:order-1">
+            <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">Fasilitas &amp; Kenyamanan</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-ink-900 sm:text-[2.25rem]">
+              Fasilitas klinik terbaik untuk <span class="text-leaf-700">pengalaman yang tenang</span>
+            </h2>
+            <p class="mt-4 text-[15px] leading-relaxed text-ink-500">
+              Nadira mengutamakan kenyamanan pasien dengan pelayanan profesional, peralatan modern (digital X-ray, laser), sterilisasi terkini, dan ruang yang ramah — termasuk untuk pasien anak.
+            </p>
+            <ul class="mt-7 space-y-3.5">
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-leaf-500 text-white">
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                </span>
+                <span class="text-[14px] text-ink-600"><strong class="font-semibold text-ink-900">Minim rasa sakit</strong> — pendekatan lembut &amp; bius lokal yang terkontrol</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-leaf-500 text-white">
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                </span>
+                <span class="text-[14px] text-ink-600"><strong class="font-semibold text-ink-900">Aman &amp; steril</strong> — standar sterilisasi ketat di setiap cabang</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-leaf-500 text-white">
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                </span>
+                <span class="text-[14px] text-ink-600"><strong class="font-semibold text-ink-900">Harga jelas</strong> — kompetitif dengan promo menarik</span>
+              </li>
+            </ul>
+            <a href="reservasi.html"
+               class="mt-8 inline-flex h-11 items-center gap-2 rounded-full bg-leaf-600 px-6 text-[13.5px] font-bold text-white shadow-soft transition hover:bg-leaf-700">
+              Jadwalkan kunjungan
+              <svg class="h-4 w-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <div class="relative">
+              <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-soap-200 to-leaf-400/30 blur-sm"></div>
+              <div class="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-soap-100 via-white to-soap-200 shadow-lift ring-1 ring-ink-900/[0.05]">
+                <div class="aspect-[4/3] p-8 sm:p-10">
+                  <div class="flex h-full flex-col justify-between">
+                    <div class="inline-flex w-fit items-center gap-2 rounded-full bg-white/80 px-3 py-1.5 text-[13px] font-bold uppercase tracking-wider text-leaf-700 shadow-sm ring-1 ring-leaf-200/60">
+                      <span class="h-1.5 w-1.5 rounded-full bg-leaf-500"></span>
+                      Klinik modern
+                    </div>
+                    <div>
+                      <p class="font-display max-w-xs text-2xl font-bold leading-snug tracking-tight text-ink-900 sm:text-[1.65rem]">
+                        Ruang nyaman. Peralatan canggih. <span>Tim yang mendengarkan.</span>
+                      </p>
+                      <p class="mt-3 max-w-sm text-[13px] leading-relaxed text-ink-500">
+                        Placeholder visual — ganti dengan foto interior / dental unit Nadira.
+                      </p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                      <div class="rounded-xl bg-white/70 px-3 py-2.5 text-center ring-1 ring-white">
+                        <div class="text-[13px] font-bold text-ink-800">Digital X-Ray</div>
+                      </div>
+                      <div class="rounded-xl bg-white/70 px-3 py-2.5 text-center ring-1 ring-white">
+                        <div class="text-[13px] font-bold text-ink-800">Laser</div>
+                      </div>
+                      <div class="rounded-xl bg-white/70 px-3 py-2.5 text-center ring-1 ring-white">
+                        <div class="text-[13px] font-bold text-ink-800">Steril</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYANAN TEASER -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="mx-auto max-w-shell px-5 lg:px-6">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">Layanan</p>
+            <h2 class="mt-2 text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl">Perawatan yang sering dicari</h2>
+          </div>
+          <a href="layanan.html" class="text-[13.5px] font-bold text-leaf-700 hover:text-leaf-800">Lihat semua layanan →</a>
+        </div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-3xl border border-ink-100 bg-soap-50/40 p-7">
+            <h3 class="text-lg font-bold text-ink-900">Ortodonti / Behel</h3>
+            <p class="mt-2 text-[13.5px] leading-relaxed text-ink-500">Perawatan rapih gigi oleh spesialis ortodonti.</p>
+          </article>
+          <article class="rounded-3xl border border-ink-100 bg-soap-50/40 p-7">
+            <h3 class="text-lg font-bold text-ink-900">Scaling &amp; Bleaching</h3>
+            <p class="mt-2 text-[13.5px] leading-relaxed text-ink-500">Pembersihan karang &amp; pemutihan senyum lebih cerah.</p>
+          </article>
+          <article class="rounded-3xl border border-ink-100 bg-soap-50/40 p-7">
+            <h3 class="text-lg font-bold text-ink-900">Tambal &amp; Cabut</h3>
+            <p class="mt-2 text-[13.5px] leading-relaxed text-ink-500">Penanganan minim rasa sakit untuk gigi bermasalah.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO -->
+    <section id="promo" class="py-6">
+      <div class="mx-auto max-w-shell px-5 lg:px-6">
+        <div class="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-r from-leaf-700 via-leaf-600 to-leaf-500 px-7 py-8 shadow-soft sm:px-10 sm:py-10">
+          <div class="relative flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+            <div>
+              <p class="font-accent text-[13px] font-bold uppercase tracking-[0.18em] text-white/70">Promo &amp; penawaran</p>
+              <h2 class="mt-2 text-xl font-bold text-white sm:text-2xl">Tanyakan promo terbaru di cabang pilihan Anda</h2>
+              <p class="mt-2 max-w-lg text-[13.5px] text-white/75">Harga kompetitif dengan promo menarik — konfirmasi saat reservasi.</p>
+            </div>
+            <a href="reservasi.html"
+               class="inline-flex h-11 shrink-0 items-center rounded-full bg-white px-6 text-[13.5px] font-bold text-leaf-800 shadow-sm transition hover:bg-soap-50">
+              Reservasi sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni" class="py-16 lg:py-20">
+      <div class="mx-auto max-w-shell px-5 lg:px-6">
+        <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">Testimoni</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl">Kata mereka yang <span class="text-leaf-700">sudah merasakan</span></h2>
+
+        <div class="scroll-x mask-fade-r mt-8 flex gap-4 overflow-x-auto pb-2">
+          <blockquote class="w-[min(100%,20rem)] shrink-0 rounded-3xl border border-ink-100 bg-white p-6 shadow-card">
+            <div class="flex items-center gap-3">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-soap-200 to-leaf-400 text-[13px] font-extrabold text-leaf-900">AR</span>
+              <div>
+                <div class="text-[14px] font-bold text-ink-900">Anis Rahmawati</div>
+                <div class="text-[13px] text-ink-400">Pasien Nadira</div>
+              </div>
+            </div>
+            <p class="mt-4 text-[13.5px] leading-relaxed text-ink-600">“Di sini pelayanan oke banget, dokternya sabar banget sama anak aku. Ruang tunggu bersih, ada mushola juga. Nyaman banget.”</p>
+          </blockquote>
+          <blockquote class="w-[min(100%,20rem)] shrink-0 rounded-3xl border border-ink-100 bg-white p-6 shadow-card">
+            <div class="flex items-center gap-3">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-sky-100 to-sky-300 text-[13px] font-extrabold text-sky-900">EM</span>
+              <div>
+                <div class="text-[14px] font-bold text-ink-900">Eko Murdiyanto</div>
+                <div class="text-[13px] text-ink-400">Pasien Ortodonti</div>
+              </div>
+            </div>
+            <p class="mt-4 text-[13.5px] leading-relaxed text-ink-600">“Langganan setiap sebulan sekali untuk perawatan ortho — dokternya ramah dan berkomunikasi lembut.”</p>
+          </blockquote>
+          <blockquote class="w-[min(100%,20rem)] shrink-0 rounded-3xl border border-ink-100 bg-white p-6 shadow-card">
+            <div class="flex items-center gap-3">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-violet-100 to-violet-300 text-[13px] font-extrabold text-violet-900">IA</span>
+              <div>
+                <div class="text-[14px] font-bold text-ink-900">Inayatul Aini</div>
+                <div class="text-[13px] text-ink-400">Pasien Nadira</div>
+              </div>
+            </div>
+            <p class="mt-4 text-[13.5px] leading-relaxed text-ink-600">“Pelayanannya baik, dokternya baik, front office ramah, ruangan nyaman, parkir luas.”</p>
+          </blockquote>
+          <blockquote class="w-[min(100%,20rem)] shrink-0 rounded-3xl border border-ink-100 bg-white p-6 shadow-card">
+            <div class="flex items-center gap-3">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-amber-100 to-amber-300 text-[13px] font-extrabold text-amber-900">FA</span>
+              <div>
+                <div class="text-[14px] font-bold text-ink-900">Fitri Andari</div>
+                <div class="text-[13px] text-ink-400">Pasien Nadira</div>
+              </div>
+            </div>
+            <p class="mt-4 text-[13.5px] leading-relaxed text-ink-600">“Pelayanan baik. Ramah. Dokternya juga memberikan saran yang memuaskan.”</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOKASI TEASER -->
+    
+    <!-- DOKTER TEASER -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="mx-auto max-w-shell px-5 lg:px-6">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">Dokter Kami</p>
+            <h2 class="mt-2 text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl">
+              Tim yang siap merawat <span class="text-leaf-700">senyum Anda</span>
+            </h2>
+            <p class="mt-2 max-w-xl text-[14.5px] text-ink-500">
+              Dokter spesialis &amp; umum berpengalaman di cabang Semarang &amp; Pati — data langsung dari sistem Nadira.
+            </p>
+          </div>
+          <a href="dokter.html" class="text-[13.5px] font-bold text-leaf-700 hover:text-leaf-800">Lihat semua dokter →</a>
+        </div>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+          <a href="dokter.html" class="rounded-[1.35rem] border border-ink-100 bg-soap-50/60 p-6 transition hover:border-leaf-200 hover:bg-white hover:shadow-card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-soap-100 text-leaf-700 shadow-sm ring-1 ring-leaf-100/60">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            </span>
+            <h3 class="mt-4 font-accent text-[15px] font-extrabold text-ink-900">50+ dokter</h3>
+            <p class="mt-1 text-[13px] text-ink-500">Praktisi aktif di jaringan cabang Nadira</p>
+          </a>
+          <a href="dokter.html" class="rounded-[1.35rem] border border-ink-100 bg-soap-50/60 p-6 transition hover:border-leaf-200 hover:bg-white hover:shadow-card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-soap-100 text-leaf-700 shadow-sm ring-1 ring-leaf-100/60">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+            </span>
+            <h3 class="mt-4 font-accent text-[15px] font-extrabold text-ink-900">Spesialis &amp; umum</h3>
+            <p class="mt-1 text-[13px] text-ink-500">Ortodonti, perio, pros, KGA, dan lainnya</p>
+          </a>
+          <a href="reservasi.html" class="rounded-[1.35rem] border border-ink-100 bg-soap-50/60 p-6 transition hover:border-leaf-200 hover:bg-white hover:shadow-card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-soap-100 text-leaf-700 shadow-sm ring-1 ring-leaf-100/60">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+            </span>
+            <h3 class="mt-4 font-accent text-[15px] font-extrabold text-ink-900">Mudah direservasi</h3>
+            <p class="mt-1 text-[13px] text-ink-500">Pilih cabang &amp; jadwal lewat formulir online</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<section class="border-t border-ink-100 bg-soap-50/50 py-16">
+      <div class="mx-auto max-w-shell px-5 text-center lg:px-6">
+        <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">Klinik Kami</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl">10+ cabang di Semarang &amp; Pati</h2>
+        <p class="mx-auto mt-3 max-w-lg text-[14.5px] text-ink-500">Pilih cabang terdekat, lalu buat reservasi lewat formulir online.</p>
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="lokasi.html" class="inline-flex h-11 items-center rounded-full border border-ink-200 bg-white px-6 text-[13.5px] font-bold text-ink-700 transition hover:border-ink-300">Lihat semua cabang</a>
+          <a href="reservasi.html" class="inline-flex h-11 items-center rounded-full bg-leaf-600 px-6 text-[13.5px] font-bold text-white transition hover:bg-leaf-700">Buat reservasi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-white py-16 lg:py-20">
+      <div class="mx-auto max-w-2xl px-5 lg:px-6">
+        <div class="text-center">
+          <p class="font-accent text-[13.5px] font-bold uppercase tracking-[0.16em] text-leaf-600">FAQ</p>
+          <h2 class="mt-2 text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl">Pertanyaan yang sering diajukan</h2>
+        </div>
+        <div class="mt-10 space-y-3">
+          <details class="faq rounded-2xl border border-ink-100 bg-soap-50/40 open:bg-white open:shadow-card">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-[14px] font-bold text-ink-900">
+              Layanan apa saja yang disediakan di Klinik Gigi Nadira?
+              <span class="faq-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-ink-500 ring-1 ring-ink-100">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </summary>
+            <div class="border-t border-ink-50 px-5 pb-4 pt-3 text-[13.5px] leading-relaxed text-ink-500">
+              Kami menyediakan berbagai layanan perawatan gigi mulai dari pemeriksaan rutin, pembersihan (scaling), penambalan, pencabutan, perawatan saluran akar, pemasangan behel, hingga perawatan estetika seperti pemutihan gigi dan veneer.
+            </div>
+          </details>
+          <details class="faq rounded-2xl border border-ink-100 bg-soap-50/40">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-[14px] font-bold text-ink-900">
+              Metode pembayaran apa saja yang diterima di Klinik Gigi Nadira?
+              <span class="faq-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-ink-500 ring-1 ring-ink-100">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </summary>
+            <div class="border-t border-ink-50 px-5 pb-4 pt-3 text-[13.5px] leading-relaxed text-ink-500">
+              Kami menerima tunai, kartu debit (semua bank), kartu kredit (Visa, Mastercard), ShopeePay, &amp; QRIS.
+            </div>
+          </details>
+          <details class="faq rounded-2xl border border-ink-100 bg-soap-50/40">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-[14px] font-bold text-ink-900">
+              Bagaimana cara melakukan reservasi/membuat janji dengan dokter gigi?
+              <span class="faq-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-ink-500 ring-1 ring-ink-100">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </summary>
+            <div class="border-t border-ink-50 px-5 pb-4 pt-3 text-[13.5px] leading-relaxed text-ink-500">
+              Buat janji mudah dengan menghubungi cabang Klinik Gigi Nadira terdekat via telepon atau WhatsApp (nomor tersedia di website kami).
+            </div>
+          </details>
+          <details class="faq rounded-2xl border border-ink-100 bg-soap-50/40">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-[14px] font-bold text-ink-900">
+              Apakah Klinik Gigi Nadira menyediakan konsultasi gigi secara online?
+              <span class="faq-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-ink-500 ring-1 ring-ink-100">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </summary>
+            <div class="border-t border-ink-50 px-5 pb-4 pt-3 text-[13.5px] leading-relaxed text-ink-500">
+              Kami menyediakan konsultasi gratis via WhatsApp. Kirim pertanyaan/foto gigi Anda. Namun, pemeriksaan langsung tetap disarankan untuk diagnosis akurat.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-5 pb-16 lg:px-6 lg:pb-20">
+      <div class="relative mx-auto max-w-shell overflow-hidden rounded-[2rem] bg-ink-900 px-8 py-12 sm:px-12">
+        <div class="relative flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+          <div class="max-w-xl">
+            <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Siap senyum lebih percaya diri bersama <span>Nadira</span>?</h2>
+            <p class="mt-3 text-[14.5px] leading-relaxed text-white/60">Isi form reservasi online — pilih cabang, tanggal, dan dokter dengan mudah.</p>
+          </div>
+          <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <a href="reservasi.html" class="inline-flex h-12 items-center justify-center rounded-full bg-leaf-500 px-7 text-[14px] font-bold text-white transition hover:bg-leaf-400">Isi form reservasi</a>
+            <a href="lokasi.html" class="inline-flex h-12 items-center justify-center rounded-full border border-white/15 px-7 text-[14px] font-semibold text-white transition hover:bg-white/5">Lihat cabang</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="mx-auto max-w-shell px-5 pt-14 pb-8 lg:px-6">
+      <div class="grid gap-10 md:grid-cols-12 md:gap-8">
+        <!-- Brand -->
+        <div class="md:col-span-5">
+          <div>
+            <div class="font-accent text-[16px] font-extrabold tracking-tight text-white">Klinik Gigi Nadira</div>
+            <div class="text-[13px] font-medium text-white/55">Senyum sehat, hidup bernilai</div>
+          </div>
+          <p class="mt-5 max-w-sm text-[14.5px] leading-relaxed text-white/60">
+            Klinik gigi modern dengan pelayanan profesional, aman, lengkap, dan minim rasa sakit di Semarang &amp; Pati.
+          </p>
+          <a href="reservasi.html"
+             class="mt-6 inline-flex h-11 items-center rounded-full bg-leaf-500 px-5 text-[14px] font-bold text-white transition hover:bg-leaf-400">
+            Buat Reservasi
+          </a>
+        </div>
+
+        <!-- Nav -->
+        <div class="md:col-span-2">
+          <h3 class="footer-heading">Navigasi</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="reservasi.html">Reservasi</a></li>
+            <li><a href="dokter.html">Dokter</a></li>
+            <li><a href="lokasi.html">Klinik Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+          </ul>
+        </div>
+
+        <!-- Layanan -->
+        <div class="md:col-span-2">
+          <h3 class="footer-heading">Layanan</h3>
+          <ul class="footer-links">
+            <li><a href="layanan.html">Ortodonti / Behel</a></li>
+            <li><a href="layanan.html">Scaling &amp; Bleaching</a></li>
+            <li><a href="layanan.html">Perawatan Anak</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div class="md:col-span-3">
+          <h3 class="footer-heading">Kontak</h3>
+          <ul class="footer-links">
+            <li>
+              <span class="block text-white/45 text-[13px] font-semibold mb-0.5">Area layanan</span>
+              <span class="text-white/80">Semarang · Pati</span>
+            </li>
+            <li>
+              <a href="https://klinikgiginadira.com" target="_blank" rel="noopener" class="text-white/80 hover:text-leaf-300">klinikgiginadira.com</a>
+            </li>
+            <li>
+              <a href="reservasi.html" class="text-white/80 hover:text-leaf-300">Reservasi online 24/7</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 sm:flex-row">
+        <p class="text-[13.5px] font-medium text-white/45">© 2026 Klinik Gigi Nadira. All rights reserved.</p>
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[13.5px] font-semibold text-white/50">
+          <a href="dokter.html" class="hover:text-white">Dokter</a>
+          <a href="lokasi.html" class="hover:text-white">Cabang</a>
+          <a href="reservasi.html" class="hover:text-white">Reservasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-ink-100 bg-white/95 p-3 backdrop-blur-xl md:hidden">
+    <a href="reservasi.html" class="flex h-12 w-full items-center justify-center rounded-full bg-leaf-600 text-[15px] font-bold text-white shadow-soft">
+      Buat Reservasi
+    </a>
+  </div>
+  <div class="h-20 md:hidden"></div>
+</body>
+</html>
