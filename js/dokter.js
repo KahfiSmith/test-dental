@@ -1,30 +1,18 @@
 /**
- * Dokter page — static first paint (Figma-ready) + optional silent refresh
- * Seed data in js/doctors-seed.js renders immediately; no "Memuat…" gate.
+ * Dokter page — fully static first paint (Figma-ready).
+ * Cards + count live in dokter.html. This file only handles search/filter + modal.
+ * No API fetch, no loading state.
  */
-const API =
-  'https://api.central.klinikgiginadira.com/api/v1/publicappointment/multibranch/doctors';
-
 const grid = document.getElementById('doctor-grid');
-const statusEl = document.getElementById('doctor-status');
 const searchEl = document.getElementById('doctor-search');
 const branchEl = document.getElementById('doctor-branch');
 const countEl = document.getElementById('doctor-count');
 const modal = document.getElementById('doctor-modal');
 const modalPanel = document.getElementById('doctor-modal-panel');
 
-/** @type {Array<any>} */
-let allDoctors = [];
-
-function applyDoctors(rows) {
-  allDoctors = normalizeList(rows || []);
-  fillBranchFilter(allDoctors);
-  if (statusEl) {
-    statusEl.classList.add('hidden');
-    statusEl.textContent = '';
-  }
-  render();
-}
+/** Pre-normalized seed from js/doctors-seed.js */
+const allDoctors =
+  typeof DOCTORS_SEED !== 'undefined' && Array.isArray(DOCTORS_SEED) ? DOCTORS_SEED : [];
 
 const AVATAR_TONES = [
   'from-leaf-400 to-leaf-700',
@@ -37,26 +25,6 @@ const AVATAR_TONES = [
   'from-emerald-400 to-green-600',
 ];
 
-const DAY_ORDER = [
-  'monday',
-  'tuesday',
-  'wednesday',
-  'thursday',
-  'friday',
-  'saturday',
-  'sunday',
-];
-
-const DAY_ID = {
-  monday: 'Senin',
-  tuesday: 'Selasa',
-  wednesday: 'Rabu',
-  thursday: 'Kamis',
-  friday: 'Jumat',
-  saturday: 'Sabtu',
-  sunday: 'Minggu',
-};
-
 function initials(name = '') {
   const clean = name.replace(/,?\s*drg\.?/gi, '').replace(/\s+/g, ' ').trim();
   const parts = clean.split(' ').filter(Boolean);
@@ -65,42 +33,14 @@ function initials(name = '') {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-function detectSpecialty(doc) {
-  const blob = `${doc.doctor_name || ''} ${doc.title || ''} ${doc.description || ''}`;
-  const rules = [
-    [/Sp\.?\s*Ort|Sp\.?\s*Ortho|Orthodont/i, 'Spesialis Ortodonti'],
-    [/Sp\.?\s*Pros/i, 'Spesialis Prostodonsia'],
-    [/Sp\.?\s*Perio/i, 'Spesialis Periodonsia'],
-    [/Sp\.?\s*KG|Konservasi/i, 'Spesialis Konservasi Gigi'],
-    [/Sp\.?\s*KGA|Anak/i, 'Spesialis Kedokteran Gigi Anak'],
-    [/Sp\.?\s*BM|Bedah/i, 'Spesialis Bedah Mulut'],
-  ];
-  for (const [re, label] of rules) {
-    if (re.test(blob)) return label;
-  }
-  return 'Dokter Gigi Umum';
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
-function formatShift(s) {
-  const parts = [];
-  if (s.shift1_start && s.shift1_end) parts.push(`${s.shift1_start} – ${s.shift1_end}`);
-  if (s.shift2_start && s.shift2_end) parts.push(`${s.shift2_start} – ${s.shift2_end}`);
-  return parts.join(' · ') || '—';
-}
-
-function normalizeSchedules(list = []) {
-  return (list || [])
-    .filter((s) => s && s.is_active !== false && (s.shift1_start || s.shift2_start))
-    .map((s) => ({
-      day: (s.day_of_week || '').toLowerCase(),
-      label: DAY_ID[(s.day_of_week || '').toLowerCase()] || s.day_of_week || '—',
-      time: formatShift(s),
-      order: DAY_ORDER.indexOf((s.day_of_week || '').toLowerCase()),
-    }))
-    .sort((a, b) => (a.order < 0 ? 99 : a.order) - (b.order < 0 ? 99 : b.order));
-}
-
-/** Hanya hari yang ada jadwal, max 4 hari */
 function scheduleRowsHtml(schedules = []) {
   const ready = [...(schedules || [])]
     .sort((a, b) => (a.order < 0 ? 99 : a.order ?? 99) - (b.order < 0 ? 99 : b.order ?? 99))
@@ -121,94 +61,41 @@ function scheduleRowsHtml(schedules = []) {
     .join('');
 }
 
-function normalizeList(rows) {
-  /** @type {Map<string, any>} */
-  const map = new Map();
-  for (const row of rows || []) {
-    if (row?.is_active === false) continue;
-    const key = row.doctor_id || row.id;
-    if (!key) continue;
-    if (!map.has(key)) {
-      map.set(key, {
-        key,
-        contentId: row.id,
-        doctorId: row.doctor_id,
-        name: (row.doctor_name || row.name || 'Dokter').trim(),
-        title: (row.title || '').trim(),
-        description: (row.description || '').trim(),
-        specialty: detectSpecialty(row),
-        email: row.doctor_email || '',
-        byBranch: {},
-      });
-    }
-    const item = map.get(key);
-    const branch = (row.branch_name || 'Cabang').trim();
-    if (!item.byBranch[branch]) {
-      item.byBranch[branch] = {
-        branch,
-        contentId: row.id,
-        schedules: normalizeSchedules(row.schedules),
-        description: (row.description || '').trim(),
-      };
-    } else {
-      // merge schedules if empty
-      if (!item.byBranch[branch].schedules.length) {
-        item.byBranch[branch].schedules = normalizeSchedules(row.schedules);
-      }
-    }
-    if ((row.description || '').length > (item.description || '').length) {
-      item.description = row.description.trim();
-    }
-  }
-
-  return Array.from(map.values())
-    .map((d) => {
-      const branches = Object.keys(d.byBranch).sort((a, b) => a.localeCompare(b, 'id'));
-      return {
-        ...d,
-        branches,
-      };
-    })
-    .sort((a, b) => a.name.localeCompare(b.name, 'id'));
-}
-
-function fillBranchFilter(doctors) {
-  const branches = new Set();
-  doctors.forEach((d) => d.branches.forEach((b) => branches.add(b)));
-  const sorted = Array.from(branches).sort((a, b) => a.localeCompare(b, 'id'));
-  branchEl.innerHTML =
-    '<option value="">Semua cabang</option>' +
-    sorted.map((b) => `<option value="${escapeHtml(b)}">${escapeHtml(b)}</option>`).join('');
-}
-
-function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
 function filtered() {
-  const q = (searchEl.value || '').trim().toLowerCase();
-  const branch = branchEl.value;
+  const q = (searchEl?.value || '').trim().toLowerCase();
+  const branch = branchEl?.value || '';
   return allDoctors.filter((d) => {
-    if (branch && !d.branches.includes(branch)) return false;
+    if (branch && !(d.branches || []).includes(branch)) return false;
     if (!q) return true;
-    const hay = `${d.name} ${d.specialty} ${d.title} ${d.branches.join(' ')} ${d.description}`.toLowerCase();
+    const hay =
+      `${d.name} ${d.specialty} ${d.title} ${(d.branches || []).join(' ')} ${d.description}`.toLowerCase();
     return hay.includes(q);
   });
 }
 
 function getDisplayBranch(doc) {
-  const selected = branchEl.value;
-  if (selected && doc.byBranch[selected]) return selected;
-  return doc.branches[0] || '';
+  const selected = branchEl?.value || '';
+  if (selected && doc.byBranch?.[selected]) return selected;
+  return (doc.branches && doc.branches[0]) || '';
 }
 
+function bindCardClicks() {
+  if (!grid) return;
+  grid.querySelectorAll('[data-doctor-key]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const doc = allDoctors.find((d) => d.key === btn.getAttribute('data-doctor-key'));
+      if (doc) openModal(doc);
+    });
+  });
+}
+
+/** Re-render only when user searches/filters — initial cards stay in HTML for Figma */
 function render() {
+  if (!grid || !allDoctors.length) return;
+
   const list = filtered();
-  countEl.textContent = `${list.length} dokter`;
+  if (countEl) countEl.textContent = `${list.length} dokter`;
+
   if (!list.length) {
     grid.innerHTML = `
       <div class="col-span-full rounded-3xl border border-ink-100 bg-white p-10 text-center text-ink-500">
@@ -220,7 +107,7 @@ function render() {
   grid.innerHTML = list
     .map((d, i) => {
       const tone = AVATAR_TONES[i % AVATAR_TONES.length];
-      const branchChips = d.branches
+      const branchChips = (d.branches || [])
         .slice(0, 3)
         .map(
           (b) =>
@@ -228,11 +115,11 @@ function render() {
         )
         .join('');
       const more =
-        d.branches.length > 3
+        (d.branches || []).length > 3
           ? `<span class="inline-flex rounded-full bg-ink-900/5 px-2.5 py-1 text-[13px] font-bold text-ink-500">+${d.branches.length - 3}</span>`
           : '';
       const desc =
-        d.description && !d.description.toLowerCase().includes('adalah dokter gigi profesional')
+        d.description && !String(d.description).toLowerCase().includes('adalah dokter gigi profesional')
           ? d.description
           : `${d.specialty} di Klinik Gigi Nadira.`;
 
@@ -258,23 +145,17 @@ function render() {
     })
     .join('');
 
-  grid.querySelectorAll('[data-doctor-key]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const doc = allDoctors.find((d) => d.key === btn.getAttribute('data-doctor-key'));
-      if (doc) openModal(doc);
-    });
-  });
+  bindCardClicks();
 }
 
 function openModal(doc) {
   if (!modal || !modalPanel) return;
 
   const preferred = getDisplayBranch(doc);
-  const branchEntries = doc.branches.map((b) => doc.byBranch[b]).filter(Boolean);
+  const branchEntries = (doc.branches || []).map((b) => doc.byBranch?.[b]).filter(Boolean);
 
-  // Prefer selected filter branch, else first with schedules
   let active =
-    (preferred && doc.byBranch[preferred]) ||
+    (preferred && doc.byBranch?.[preferred]) ||
     branchEntries.find((b) => b.schedules?.length) ||
     branchEntries[0] ||
     { branch: '—', schedules: [], description: doc.description };
@@ -286,7 +167,6 @@ function openModal(doc) {
 
   const scheduleHtml = scheduleRowsHtml(active.schedules || []);
 
-  // Branch tabs if multi-branch
   const tabs =
     branchEntries.length > 1
       ? `<div class="mt-3 flex flex-wrap gap-2 shrink-0" id="modal-branch-tabs">
@@ -350,7 +230,7 @@ function openModal(doc) {
   modalPanel.querySelectorAll('[data-branch]').forEach((tab) => {
     tab.addEventListener('click', () => {
       const bName = tab.getAttribute('data-branch');
-      const entry = doc.byBranch[bName];
+      const entry = doc.byBranch?.[bName];
       if (!entry) return;
 
       modalPanel.querySelectorAll('[data-branch]').forEach((t) => {
@@ -379,20 +259,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-/** Silent background refresh — never blocks first paint or shows loading UI */
-async function refreshInBackground() {
-  try {
-    const url = `${API}?page=1&limit=100&search=`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = await res.json();
-    applyDoctors(json.data || []);
-  } catch (err) {
-    // Keep seed data on screen; log only
-    console.warn('Dokter silent refresh skipped:', err);
-  }
-}
-
 searchEl?.addEventListener('input', () => render());
 branchEl?.addEventListener('change', () => render());
 
@@ -403,8 +269,5 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
-// First paint: seed (or empty) immediately — no loading message
-const seed =
-  typeof DOCTORS_SEED !== 'undefined' && Array.isArray(DOCTORS_SEED) ? DOCTORS_SEED : [];
-applyDoctors(seed);
-refreshInBackground();
+// Keep static HTML cards for first paint / Figma — only wire interactions
+bindCardClicks();

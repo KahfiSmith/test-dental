@@ -63,7 +63,7 @@
         </div>
         <div class="flex items-center gap-3">
           <div class="rounded-2xl bg-white px-4 py-3 shadow-card ring-1 ring-ink-100">
-            <div id="doctor-count" class="font-display text-2xl font-bold text-ink-900">—</div>
+            <div id="doctor-count" class="font-display text-2xl font-bold text-ink-900">54 dokter</div>
             <div class="text-sm font-bold uppercase tracking-wider text-ink-400">Ditampilkan</div>
           </div>
           <a href="reservasi.html" class="inline-flex h-12 items-center rounded-full bg-leaf-600 px-5 text-sm font-bold text-white transition hover:bg-leaf-700">
@@ -82,14 +82,993 @@
           <label class="field-label" for="doctor-branch">Cabang</label>
           <select class="field-input" id="doctor-branch">
             <option value="">Semua cabang</option>
+            <option value="Fatmawati">Fatmawati</option>
+            <option value="Joyo">Joyo</option>
+            <option value="Kelud">Kelud</option>
+            <option value="MT Haryono">MT Haryono</option>
+            <option value="Ngaliyan">Ngaliyan</option>
+            <option value="Puri">Puri</option>
+            <option value="Sukun">Sukun</option>
+            <option value="Tirto Agung">Tirto Agung</option>
+            <option value="Tlogosari">Tlogosari</option>
+            <option value="Tusam">Tusam</option>
           </select>
         </div>
       </div>
 
-      <p id="doctor-status" class="mt-6 hidden text-md font-semibold text-ink-500" aria-live="polite"></p>
-
       <div id="doctor-grid" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- cards injected immediately from js/doctors-seed.js + dokter.js -->
+        <button type="button" data-doctor-key="59bb2b1a-ddbc-41dc-be25-dacd2de9c757"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-leaf-400 to-leaf-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              AS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Ahmad Sulistiono, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Sukun</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="ec6f067c-45e8-43e2-91ae-b1bfe206b9d5"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-sky-400 to-blue-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              AH
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Aisha Permata Hapsari, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Sukun</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="ceee9e6c-0548-4192-98ec-8a9e076a5add"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-violet-400 to-purple-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Ortodonti</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              AO
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Alvita Wibowo, drg. Sp. Ortho</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Ortodonti</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Ortodonti di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="b7ab60c3-2b22-4aea-ace7-5f74e5cbc463"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-amber-400 to-orange-500 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              AF
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Andhi Eko Febridayanto, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="fb108167-e4e0-4b8b-b543-b8f302bb9b06"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-teal-400 to-cyan-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              AM
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Andra Mahyuza, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tlogosari</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="f25a239e-0165-43d1-af7b-0d8369de1d16"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-rose-400 to-pink-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Periodonsia</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              AS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Ayuda Nur Sukmawati, drg., Sp.Perio</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Periodonsia</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Periodonsia di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Fatmawati</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="9a8ad09c-14f5-420f-aa1f-c6ad18ab6771"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-indigo-400 to-blue-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              DW
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Desy Kharisma Widyaningrum, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Puri</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="804b16ca-1137-430a-a353-b33f38c7af9e"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-emerald-400 to-green-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              DK
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Dhiah Ayu Kusumastuti, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Ngaliyan</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="b45d60b6-2f32-4076-b4ad-2523e1c247bd"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-leaf-400 to-leaf-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              NS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">drg Nadira Salsabilla</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Kelud</span><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="80645259-2698-4bac-9753-d40039f31a84"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-sky-400 to-blue-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Konservasi Gigi</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              DS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Dyah Perwitasari S., drg. Sp.KGA</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Konservasi Gigi</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Konservasi Gigi di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="46d61ff2-5681-4e85-8cec-9762a38c3dc6"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-violet-400 to-purple-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              ED
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Elizabeth Daru Sun Dwija, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Sukun</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="98e4d331-2ff8-4abd-a2b3-d82ca865f1e1"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-amber-400 to-orange-500 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              ED
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Elizabeth Daru Sun Dwija, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="05d88cdc-9ec3-4a60-85a0-a1ecfaa0f026"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-teal-400 to-cyan-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              FP
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Febtrias Mandrabuti Prasetio, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="a4f61892-3258-473b-99f5-d6aff1a4297d"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-rose-400 to-pink-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              FA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Fudhla Rahma Amalia, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Joyo</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="71f43896-bffa-4215-9b41-66e433c2e022"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-indigo-400 to-blue-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              HA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Haliza, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Fatmawati</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="45bb69a7-57be-4b0f-ad1c-4f322d6151ca"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-emerald-400 to-green-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              HA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Haliza, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tlogosari</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="bb06a0a8-3784-4e02-af40-47b3fca69f43"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-leaf-400 to-leaf-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Prostodonsia</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              HS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Helmi Fathurrahman, drg. Sp.Pros</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Prostodonsia</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Prostodonsia di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Fatmawati</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="07cbc4c2-cba7-4801-aeeb-cbf1f8517265"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-sky-400 to-blue-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Konservasi Gigi</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              HS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Hernawatiningsih, drg., Sp.KG</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Konservasi Gigi</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Konservasi Gigi di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="3ca00ef5-2c10-4f02-8602-2bacab7c3a53"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-violet-400 to-purple-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Ortodonti</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              IO
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Ika Sukma Wulandari, drg. Sp. Ort.</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Ortodonti</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Ortodonti di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="076645f7-3b1b-49c6-961a-52f3b89d9501"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-amber-400 to-orange-500 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              IS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Indah Kartika Sari, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Kelud</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="01b23314-457a-49d4-bf11-d5dfa5a68232"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-teal-400 to-cyan-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              IS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Indah Kartika Sari, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="a0347314-6889-4955-aaf1-ef549ce3273a"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-rose-400 to-pink-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              IH
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Isya Ferischa Himawan, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Kelud</span><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Ngaliyan</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="1b92bdd1-9906-4888-abe7-a8adca36c480"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-indigo-400 to-blue-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              IF
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Ivana Isna Fenty Fadina, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Puri</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="ff8cf0cd-1e41-4911-b17a-6a32f7c8df80"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-emerald-400 to-green-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              KP
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Krisna Devara Pramuditya, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Sukun</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="6a13553b-ab5a-486b-b0aa-2ee34c8837cc"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-leaf-400 to-leaf-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              LP
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Leonita Reza Palevi, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Puri</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="d8a10a44-e9c6-42a5-8ab9-12f8e2ba479b"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-sky-400 to-blue-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">M Noer Arif, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tirto Agung</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="953c37d5-e26e-4a07-98db-8be34bf6e636"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-violet-400 to-purple-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MI
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">M. D. Irfani, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tlogosari</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="d871e96a-da51-4827-9499-8e17e11f04b0"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-amber-400 to-orange-500 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">M. Fa'iq Azhari, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Ngaliyan</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="a8ad8642-b684-4756-8699-17ad63226cfc"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-teal-400 to-cyan-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MB
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">M. Malik Bahrain, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="487b42c9-e261-4a0c-adfb-25825497192f"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-rose-400 to-pink-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Maria Titania Bunga Ardyta, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="36a8bae7-2f71-4999-b7ab-6c1c7764edea"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-indigo-400 to-blue-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Maruli Catur Gunawan Sitorus, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Fatmawati</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="8b69eba4-1e6e-478d-abc1-70f37c111721"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-emerald-400 to-green-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Maruli Catur Gunawan Sitorus, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Sukun</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="df3d8a2f-007a-458d-a962-e2fd92dc5e14"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-leaf-400 to-leaf-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Konservasi Gigi</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Meliana Ganda W. drg., Sp.KG</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Konservasi Gigi</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Konservasi Gigi di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="f1df534f-ddc3-49fd-8aa6-c051e6769ae4"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-sky-400 to-blue-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Melinda Savira Ayudyawati, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tirto Agung</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="f6ee8df1-030a-465c-b4e7-67bff58d92bb"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-violet-400 to-purple-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MF
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Millatina Eva Fitria, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Kelud</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="5e15197b-7f58-42cc-8a4e-988c687c1c2b"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-amber-400 to-orange-500 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              MF
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Millatina Eva Fitria, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Ngaliyan</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="e4e5bc64-b281-4f94-8522-4a7018316248"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-teal-400 to-cyan-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              NA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Nalindra, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Puri</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="b081a37c-1c3d-4aab-a3f3-f37a786d80fb"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-rose-400 to-pink-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              NP
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Niken Hening Pramesthi, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Puri</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="1d9d87e3-6d58-486b-b96e-7c420caa62cd"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-indigo-400 to-blue-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Prostodonsia</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              NS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Novi Sagita Rizky, drg., Sp.Pros</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Prostodonsia</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Prostodonsia di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="eb82c28a-47f9-499a-b5ff-eae1865e644b"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-emerald-400 to-green-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              NH
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Noviana Tri Handayani, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tlogosari</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="b4433985-02fc-4ac9-be0f-76851e93f202"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-leaf-400 to-leaf-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Konservasi Gigi</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              PS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Prima Agusmawanti, Dr. drg. Sp.KGA</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Konservasi Gigi</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Konservasi Gigi di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tlogosari</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="148bf749-ff9e-477b-a05d-f4b7da61bfbe"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-sky-400 to-blue-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              RF
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Ratu Anna Muthia Faridza, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Fatmawati</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="c88056ed-de8a-49f7-8c1b-d57c19041b8d"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-violet-400 to-purple-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              RF
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Ratu Anna Muthia Faridza, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="8067fd4a-4876-4684-89b5-817c4e99ddcc"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-amber-400 to-orange-500 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              RW
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Rhesa Aditiana Wardani, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Ngaliyan</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="def95f4b-596b-4b61-8e9f-a4d293ae6498"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-teal-400 to-cyan-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              RA
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Rizka Fadiqta Awwalin, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Fatmawati</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="68863074-ae28-429f-8f33-4fb806a87c25"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-rose-400 to-pink-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              RP
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Rizki Widya Paramartha, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="b035c7ea-3d1f-457f-8fb0-1446e5090d59"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-indigo-400 to-blue-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              RN
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Rizky Nurhidayah, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tlogosari</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="52d1164b-a992-4fdc-b48e-bd648f2d8b20"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-emerald-400 to-green-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              RN
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Rizky Nurhidayah, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="417ca739-1d30-43cd-8f20-27432ff94df3"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-leaf-400 to-leaf-700 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              SD
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Saskia Putri Dewanjanie, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tirto Agung</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="86a5f604-6478-47d4-b3c6-0b32d923b0d4"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-sky-400 to-blue-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              SR
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Sheilla Difa Ramadhiani, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">MT Haryono</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="8fc801d1-00e2-44b3-9935-ff36771db452"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-violet-400 to-purple-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Ortodonti</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              SS
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Shella Indri Novianty, drg. Sp.Ort</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Ortodonti</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Ortodonti di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="58809dd6-84e8-4e1b-ac11-734acd0d43d3"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-amber-400 to-orange-500 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              SN
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Shofwatin Ni’mah, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Joyo</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="633588ff-04a1-4dca-b2ef-f0f659126154"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-teal-400 to-cyan-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Dokter Gigi Umum</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              VI
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Vania Jesslyn Irawan, drg</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Dokter Gigi Umum</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Dokter Gigi Umum di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Kelud</span></div>
+          </div>
+        </button>
+        <button type="button" data-doctor-key="12c196da-609e-4cd5-b9eb-3e00df49069e"
+          class="doctor-card group flex flex-col overflow-hidden rounded-[1.35rem] border border-ink-100 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-leaf-200 hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500/40">
+          <div class="relative bg-gradient-to-br from-rose-400 to-pink-600 px-5 pb-10 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <span class="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">Spesialis Ortodonti</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-1 text-[12px] font-bold text-white/90">Lihat jadwal</span>
+            </div>
+            <div class="absolute -bottom-8 left-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-accent text-lg font-extrabold text-ink-800 shadow-soft ring-4 ring-white">
+              WO
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-11">
+            <h2 class="font-display text-xl font-bold tracking-tight text-ink-900">Widodo Lestari, drg. Sp. Ort</h2>
+            <p class="mt-1 text-[14px] font-semibold text-leaf-700">Spesialis Ortodonti</p>
+            <p class="mt-3 line-clamp-2 text-[14px] leading-relaxed text-ink-500">Spesialis Ortodonti di Klinik Gigi Nadira.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5"><span class="inline-flex rounded-full bg-soap-50 px-2.5 py-1 text-[13px] font-bold text-leaf-800 ring-1 ring-leaf-100">Tusam</span></div>
+          </div>
+        </button>
       </div>
     </div>
   </main>
