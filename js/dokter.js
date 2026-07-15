@@ -1,5 +1,6 @@
 /**
- * Dokter page — live data + modal jadwal praktik
+ * Dokter page — static first paint (Figma-ready) + optional silent refresh
+ * Seed data in js/doctors-seed.js renders immediately; no "Memuat…" gate.
  */
 const API =
   'https://api.central.klinikgiginadira.com/api/v1/publicappointment/multibranch/doctors';
@@ -14,6 +15,16 @@ const modalPanel = document.getElementById('doctor-modal-panel');
 
 /** @type {Array<any>} */
 let allDoctors = [];
+
+function applyDoctors(rows) {
+  allDoctors = normalizeList(rows || []);
+  fillBranchFilter(allDoctors);
+  if (statusEl) {
+    statusEl.classList.add('hidden');
+    statusEl.textContent = '';
+  }
+  render();
+}
 
 const AVATAR_TONES = [
   'from-leaf-400 to-leaf-700',
@@ -368,25 +379,17 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-async function load() {
-  statusEl.textContent = 'Memuat daftar dokter…';
-  statusEl.classList.remove('hidden', 'text-rose-600');
+/** Silent background refresh — never blocks first paint or shows loading UI */
+async function refreshInBackground() {
   try {
     const url = `${API}?page=1&limit=100&search=`;
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    allDoctors = normalizeList(json.data || []);
-    fillBranchFilter(allDoctors);
-    statusEl.classList.add('hidden');
-    render();
+    applyDoctors(json.data || []);
   } catch (err) {
-    console.error(err);
-    statusEl.textContent =
-      'Gagal memuat data dokter dari server Nadira. Coba refresh halaman.';
-    statusEl.classList.add('text-rose-600');
-    grid.innerHTML = '';
-    countEl.textContent = '0 dokter';
+    // Keep seed data on screen; log only
+    console.warn('Dokter silent refresh skipped:', err);
   }
 }
 
@@ -400,4 +403,8 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
-load();
+// First paint: seed (or empty) immediately — no loading message
+const seed =
+  typeof DOCTORS_SEED !== 'undefined' && Array.isArray(DOCTORS_SEED) ? DOCTORS_SEED : [];
+applyDoctors(seed);
+refreshInBackground();
