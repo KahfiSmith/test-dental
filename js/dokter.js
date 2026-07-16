@@ -148,6 +148,14 @@ function render() {
   bindCardClicks();
 }
 
+function reservationUrl(doctorName, branchName) {
+  const params = new URLSearchParams();
+  if (doctorName) params.set('dokter', doctorName);
+  if (branchName && branchName !== '—') params.set('cabang', branchName);
+  const qs = params.toString();
+  return qs ? `reservasi.html?${qs}` : 'reservasi.html';
+}
+
 function openModal(doc) {
   if (!modal || !modalPanel) return;
 
@@ -185,14 +193,14 @@ function openModal(doc) {
       : '';
 
   modalPanel.innerHTML = `
-    <div class="doctor-modal-shell flex h-[min(90vh,500px)] flex-col overflow-hidden rounded-[1.5rem] bg-white shadow-2xl sm:h-[480px] sm:flex-row">
-      <div class="relative flex h-40 shrink-0 items-center justify-center bg-gradient-to-br from-sky-100 via-soap-50 to-leaf-100 sm:h-auto sm:w-[40%]">
+    <div class="doctor-modal-shell flex h-[min(92vh,560px)] flex-col overflow-hidden rounded-[1.5rem] bg-white shadow-2xl sm:h-[520px] sm:flex-row">
+      <div class="relative flex h-36 shrink-0 items-center justify-center bg-gradient-to-br from-sky-100 via-soap-50 to-leaf-100 sm:h-auto sm:w-[38%]">
         <button type="button" id="modal-close-x" class="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-ink-500 shadow-sm ring-1 ring-ink-100 transition hover:bg-white hover:text-ink-800 sm:hidden" aria-label="Tutup">
           <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
-        <div class="flex h-28 w-28 items-center justify-center rounded-[1.25rem] bg-white/70 shadow-sm ring-1 ring-white sm:h-44 sm:w-44">
-          <iconify-icon icon="fluent-emoji-flat:tooth" width="100" height="100" class="sm:hidden"></iconify-icon>
-          <iconify-icon icon="fluent-emoji-flat:tooth" width="120" height="120" class="hidden sm:block"></iconify-icon>
+        <div class="flex h-24 w-24 items-center justify-center rounded-[1.25rem] bg-white/70 shadow-sm ring-1 ring-white sm:h-40 sm:w-40">
+          <iconify-icon icon="fluent-emoji-flat:tooth" width="88" height="88" class="sm:hidden"></iconify-icon>
+          <iconify-icon icon="fluent-emoji-flat:tooth" width="112" height="112" class="hidden sm:block"></iconify-icon>
         </div>
       </div>
       <div class="relative flex min-h-0 min-w-0 flex-1 flex-col p-5 sm:p-7">
@@ -201,7 +209,7 @@ function openModal(doc) {
         </button>
 
         <div class="shrink-0 pr-8">
-          <p class="text-[14px] font-bold text-leaf-600">${escapeHtml(doc.name)}</p>
+          <p class="text-[14px] font-bold text-leaf-600">${escapeHtml(doc.specialty || 'Dokter Gigi')}</p>
           <h2 class="mt-0.5 font-display text-xl font-bold tracking-tight text-ink-900 sm:text-2xl">${escapeHtml(doc.name)}</h2>
           <p class="mt-1 text-[14px] font-semibold text-ink-400" data-modal-branch-label>(${escapeHtml(active.branch)})</p>
           <p class="doctor-modal-desc mt-3 text-[14.5px] leading-relaxed text-ink-600">${escapeHtml(desc)}</p>
@@ -215,6 +223,16 @@ function openModal(doc) {
         <div class="doctor-schedule-box mt-2 min-h-0 flex-1 overflow-y-auto" id="modal-schedule-list">
           ${scheduleHtml}
         </div>
+
+        <div class="mt-4 shrink-0 border-t border-ink-50 pt-4">
+          <a id="modal-reserve-btn"
+             href="${escapeHtml(reservationUrl(doc.name, active.branch))}"
+             class="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-leaf-600 px-5 text-sm font-bold text-white shadow-soft transition hover:bg-leaf-700">
+            Reservasi dengan dokter ini
+            <svg class="h-4 w-4 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <p class="mt-2 text-center text-[12px] font-medium text-ink-400">Cabang &amp; dokter terisi otomatis di formulir</p>
+        </div>
       </div>
     </div>
   `;
@@ -226,6 +244,8 @@ function openModal(doc) {
   const close = () => closeModal();
   modalPanel.querySelector('#modal-close')?.addEventListener('click', close);
   modalPanel.querySelector('#modal-close-x')?.addEventListener('click', close);
+
+  const reserveBtn = modalPanel.querySelector('#modal-reserve-btn');
 
   modalPanel.querySelectorAll('[data-branch]').forEach((tab) => {
     tab.addEventListener('click', () => {
@@ -246,8 +266,9 @@ function openModal(doc) {
       if (branchLine) branchLine.textContent = `(${bName})`;
 
       const list = modalPanel.querySelector('#modal-schedule-list');
-      if (!list) return;
-      list.innerHTML = scheduleRowsHtml(entry.schedules || []);
+      if (list) list.innerHTML = scheduleRowsHtml(entry.schedules || []);
+
+      if (reserveBtn) reserveBtn.href = reservationUrl(doc.name, bName);
     });
   });
 }

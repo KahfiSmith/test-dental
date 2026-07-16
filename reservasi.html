@@ -57,6 +57,7 @@
         <p class="mt-2 text-base leading-relaxed text-ink-500">
           Lengkapi data di bawah untuk mengajukan janji temu. Tim kami akan menghubungi Anda untuk konfirmasi.
         </p>
+        <p id="prefill-banner" class="mt-4 hidden rounded-xl border border-leaf-200 bg-soap-50 px-4 py-3 text-sm font-semibold text-leaf-800" role="status"></p>
       </div>
 
       <div class="overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-card">
@@ -90,14 +91,16 @@
               <label class="field-label" for="cabang">Cabang Klinik <span class="req">*</span></label>
               <select class="field-input" id="cabang" name="cabang" required>
                 <option value="" disabled selected>Pilih cabang klinik</option>
-                <option value="tusam">Tusam Timur — Semarang</option>
-                <option value="sukun">Sukun Raya — Semarang</option>
+                <option value="tusam">Tusam — Semarang</option>
+                <option value="sukun">Sukun — Semarang</option>
                 <option value="tirto">Tirto Agung — Semarang</option>
-                <option value="kelud">Kelud Raya — Semarang</option>
+                <option value="kelud">Kelud — Semarang</option>
                 <option value="fatmawati">Fatmawati — Semarang</option>
-                <option value="haryono">MT. Haryono — Semarang</option>
+                <option value="haryono">MT Haryono — Semarang</option>
                 <option value="ngaliyan">Ngaliyan — Semarang</option>
                 <option value="tlogosari">Tlogosari — Semarang</option>
+                <option value="joyo">Joyo — Semarang</option>
+                <option value="puri">Puri — Semarang</option>
                 <option value="pati-pratomo">Pati — Pratomo</option>
                 <option value="pati-diponegoro">Pati — Diponegoro</option>
               </select>
@@ -219,6 +222,7 @@
     </div>
   </footer>
 
+  <script src="js/doctors-seed.js"></script>
   <script src="js/reservasi.js"></script>
 </body>
 </html>
